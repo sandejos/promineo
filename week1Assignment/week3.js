@@ -56,16 +56,18 @@ var nameLengths = names.map(function(element){
 return element.length
 
 });
-console.log(nameLengths[1]);
 
-let totalNameLengths = 0;
-for (let i = 0; i < nameLengths; i++){
-    totalNameLengths += namelengths[i] + 1;
+for (let i = 0; i < nameLengths.length; i++){
+    console.log(names[i] + ' Has ' +  nameLengths[i] + ' Letters')
+}
+// Write a loop to iterate over the nameLengths array and calculate the sum of all the elements in the array. Print the result to the console.
+let addingNameLengths = 0;
+for (let i = 0; i < nameLengths.length; i++){
+    addingNameLengths += nameLengths[i]
 
 }
-console.log(totalNameLengths)
 
-
+console.log('Total elements in the Array ' + addingNameLengths)
 //Write a function that takes two parameters, word and n, as arguments and returns the word concatenated to itself n number of times. (i.e. if I pass in ‘Hello’ and 3, I would expect the function to return ‘HelloHelloHello’).
 
 function something(word, n){
@@ -126,7 +128,24 @@ console.log(fullNames('Joshua', 'Sanders'));
  console.log(averageArray());
 
  // Write a function that takes two arrays of numbers and returns true if the average of the elements in the first array is greater than the average of the elements in the second array.
+let avgArray1 = [165, 12, 27, 43, 56];
+let avgArray2 = [54, 26, 90, 7, 38];
 
+var avgArrayTotal1 = 0;
+for(var i = 0; i < avgArray1.length; i++) {
+    avgArrayTotal1 += avgArray1[i];
+}
+var avgOne = avgArrayTotal1 / avgArray1.length;
+
+var avgArrayTotal2 = 0;
+for(var i = 0; i < avgArray2.length; i++) {
+    avgArrayTotal2 += avgArray2[i];
+}
+var avgTwo = avgArrayTotal2 / avgArray2.length;
+
+if (avgOne > avgTwo){
+    console.log('The first array is bigger than the second')
+} else console.log('The second array is bigger than the first')
 
  //Write a function called willBuyDrink that takes a boolean isHotOutside, and a number moneyInPocket, and returns true if it is hot outside and if moneyInPocket is greater than 10.50.
 function willBuyDrinks(isHotOutside, moneyInPocket){
