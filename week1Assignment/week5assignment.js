@@ -93,7 +93,7 @@ class Drivers {                                   // creates a class called driv
     }
   
     viewCarsDriven(){                                                       // function that takes an index and sets the selected value equal to the index of the carsdriven arry
-      let index = prompt('Enter the position 0-X of the team you want to see'); //It then iterates through the array and prints out the information of the selected indexed car
+      let index = prompt('Enter the position 0-X of the car you want to see'); //It then iterates through the array and prints out the information of the selected indexed car
       if(index > -1 && index < this.carsDriven.length){
         this.selectedCarsDriven = this.carsDriven[index];
         let description = 'Car Driven: ' + this.selectedCarsDriven.carName + '\n';
