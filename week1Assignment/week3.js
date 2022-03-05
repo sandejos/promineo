@@ -114,7 +114,7 @@ console.log(fullNames('Joshua', 'Sanders'));
 
  //Write a function that takes an array of numbers and returns the average of all the elements in the array.
 
- const arrayNumbers2 = [50, 25, 25, 75];
+ let arrayNumbers2 = [50, 25, 25, 75];
  let sumAverageArray = 0;
  function averageArray(){
     for(let i = 0; i < arrayNumbers2.length; i++){

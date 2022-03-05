@@ -1,0 +1,65 @@
+week 4 const vs let 
+
+different versions. In 2015 a new version of Eckman was created called es6.
+New syntax allows javascript to be written in a more object oriented approach through classes
+
+let and const
+
+let allows us to declare a variable that only exists within a block scope at the end of any block where is was declared the variable no longer exists
+allows use of an existing variable within a block without overriding 
+
+var x = 10;
+{
+    let x = 2; // x = 2 only exists in this block.
+}
+
+const is used to create a constant. You cant change the valie of the variable once it is set. 
+
+const pi = 3.14159; 
+
+you cant change that value because it is a constant 
+
+week 4 template literals: add way we can handle strings.
+
+declared like a string but using back ticks. Allows us to concatenate without \n 
+This gives spaces automatically no backslash n 
+let myString = `Hello 
+world
+nick`;
+
+Also allow us to execute code inside a string ${}
+
+console.log(`six times 5 = %{6 * 5}`) will automatically concatenate to the string 
+
+week 4 arrow functions "Fat arrow functions)
+
+first part of arrow function assign it to a variable
+
+let fullName = (firstName, LastName) => 'firstName" + ' ' + 'lastName; or `${firstName} ${lastName}`
+
+if you have multiple lines or curly braces are needed you have to return the function 
+
+week 4 callbacks 
+
+Js only runs one line of code at a time.
+
+javascript is event driven doesnt wait for line to finish just moves onto next line of code after reading each line.
+
+functions are objects meaning we can pass them into other functions as arguments
+
+callback = passing function (as an argument) into another function to be exectued after the code is complete 
+
+week 4 promises
+
+solves the same problem as a callback
+
+object represents the eventual completion or failure of a something not occuring at the same time 
+
+we can return a promise and then say when it finishes executing do something 
+
+week 5 OOP
+Abstraction allows us to hide complexity by giving us a 30000 foot view of a concept. Ex an abstraction for vehicles would be that they all move.
+Encapsulation is hiding the details of how a method works. Example when you drive a car you dont have to know what the engine is doing to be able to drive it. 
+Inheritance OOP allows onjects to inherit properties and functionalities from other classes.
+Polymorphism is something that can take many different forms. EX an animal communicates different than other animals. 
+Uses classes to group our code in a logical way to represent objects 
