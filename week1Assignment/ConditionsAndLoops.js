@@ -1,6 +1,6 @@
-class PlayerOne{
+class Players{
   constructor(name, points){
-  this.name = name;
+  this.name = [];
   this.points = points;
   }
 }
@@ -62,13 +62,14 @@ class WarGameMainMenu{
   startAGameOfWar(){
    
    function getDeck(){ const suits = ['Hearts', 'Spades', 'Clubs', 'Diamonds'];
-    const values = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J','Q','K'];
+    const values = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11,12,13]
+    const rank = ['A', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'J','Q','K'];
 
     let deck = [];
 
     for (let i = 0; i < suits.length; i++) {
       for (let j = 0; j < values.length; j++) {
-      let card = { Value: values[j], Suit: suits[i] };
+      let card = { Value: values[j], Suit: suits[i], Rank: rank[j] };
       deck.push(card);
         }
       }
@@ -87,45 +88,31 @@ class WarGameMainMenu{
     return deck;
   }
 
-   let deckrandom = randomizer();
+    let deckRandom = randomizer();
 
-   function dealCards(){
-          let hand = [];
-
-          while(hand.length < 52){
-            hand.push(deckrandom.pop());
-          }
-          return hand;
-                    
-        }
-          let hand = dealCards();
-
-          const half = Math.ceil(hand.length / 2);
-          let playerOneCards = hand.slice(0, half)
-          let playerTwoCards = hand.slice(-half)
-        
+          const half = Math.ceil(deckRandom.length / 2);
+          const playerOneCards = deckRandom.slice(0, half)
+          const playerTwoCards = deckRandom.slice(-half)
       
-      console.log(playerOneCards);
+
+      console.log(playerOneCards[7]);
       console.log(playerTwoCards);
       
 
-      function playGame(playerOneCards,playerTwoCards, PlayerOne, PlayerTwo) {
         let playerOneScore = 0;
         let playerTwoScore = 0;
-
+        
         for(let i = 0; i < 26; i++){
-          if(playerOneCards > playerTwoCards){
+          if(playerOneCardsV[0] > playerTwoCards[0]){
             console.log('Player one wins');
             playerOneScore +=1;
-          } else if (playerTwoCards > playerOneCards){
+          } else if (playerTwoCards[0] > playerOneCards[0]){
             console.log('Player two wins');
             playerTwoScore +=1;
-          } else (playerOneCards == playerTwoCards)
+          } else (playerOneCards[0] == playerTwoCards[0])
           console.log('No Points Given');
         }
-      }
-      playGame();
-  
+      
       
   }
 }
