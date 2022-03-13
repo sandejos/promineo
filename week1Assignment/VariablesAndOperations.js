@@ -1,7 +1,6 @@
-var costOfMilk = 3.2;
-
-if(costOfMilk < 2) {
-    console.log('I need some milk');
-} else if (costOfMilk < 3) {
-    console.log('Im too poor for milk');
-} else console.log('Mommy milkers');
+function concatenate(var1, var2){
+    if(typeof var1 != 'string'){
+        throw new Error('This must be a string');
+    }
+    return var1 + var2;
+}
